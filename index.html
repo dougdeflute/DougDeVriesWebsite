@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Douglas DeVries | Flute Performance and Education</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* ==========================================================
+       COLOR PALETTE: Whites, Browns, Beige, Gray, Navy
+       ========================================================== */
+    :root {
+      --bg-cream: #FAF8F5;
+      --bg-surface: #FFFFFF;
+      --bg-beige: #F2ECE3;
+      --bg-beige-card: #EAE3D6;
+      
+      --text-dark: #1E1A17;
+      --text-muted: #57524C;
+      --text-light: #7E7770;
+      
+      --brown-accent: #6E4A35;
+      --brown-deep: #3F291D;
+      --navy-primary: #152238;
+      --navy-light: #203354;
+      
+      --gray-border: #E5E0D8;
+      --gray-subtle: #F6F4F1;
+      
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --container-width: 1140px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      line-height: 1.75;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================
+       HEADER & NAVIGATION
+       ========================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250, 248, 245, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--navy-primary);
+    }
+
+    .logo span {
+      color: var(--brown-accent);
+      font-weight: 400;
+      font-size: 1.15rem;
+      margin-left: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links a:hover {
+      color: var(--navy-primary);
+    }
+
+    .nav-socials {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .nav-socials a {
+      color: var(--navy-primary);
+      font-size: 1.05rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-beige);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .nav-socials a:hover {
+      background: var(--navy-primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .mobile-toggle {
+      display: none;
+      font-size: 1.4rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--navy-primary);
+    }
+
+    /* ==========================================================
+       HERO (PHOTO AT THE TOP & CLEAN PRESENTATION)
+       ========================================================== */
+    .hero {
+      padding: 70px 0 80px;
+      background: linear-gradient(180deg, var(--bg-cream) 0%, var(--bg-beige) 100%);
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--brown-accent);
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 3.4rem;
+      line-height: 1.15;
+      font-weight: 700;
+      color: var(--navy-primary);
+      margin-bottom: 12px;
+    }
+
+    .hero-role {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      font-weight: 400;
+      color: var(--brown-accent);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .hero-blurb {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 34px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 28px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background-color: var(--navy-primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--navy-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--brown-deep);
+      border-color: var(--brown-accent);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--brown-accent);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Photo */
+    .hero-photo-wrapper {
+      position: relative;
+    }
+
+    .hero-photo-frame {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(21, 34, 56, 0.1);
+      border: 6px solid var(--bg-surface);
+      background: var(--bg-beige-card);
+      aspect-ratio: 4 / 5;
+    }
+
+    .hero-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ==========================================================
+       ABOUT & BIO SECTION
+       ========================================================== */
+    .section-about {
+      padding: 100px 0;
+      background: var(--bg-surface);
+    }
+
+    .bio-split {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .bio-visuals {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: sticky;
+      top: 100px;
+    }
+
+    .photo-card {
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--gray-border);
+      background: var(--bg-beige);
+    }
+
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 16 / 11;
+      object-fit: cover;
+    }
+
+    .photo-caption {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      padding: 8px 12px;
+      text-align: right;
+      background: var(--bg-cream);
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--brown-accent);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .bio-content h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--navy-primary);
+      margin-bottom: 24px;
+    }
+
+    .bio-content p {
+      margin-bottom: 20px;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* ==========================================================
+       DOUG IN REAL LIFE (INSTAGRAM GRID)
+       ========================================================== */
+    .section-irl {
+      padding: 90px 0;
+      background: var(--bg-cream);
+      border-top: 1px solid var(--gray-border);
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 46px;
+    }
+
+    .section-header-center h2 {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      color: var(--navy-primary);
+      margin-bottom: 10px;
+    }
+
+    .section-header-center p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .ig-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 6px;
+      background: var(--bg-beige-card);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .ig-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .ig-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(21, 34, 56, 0.75);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      opacity: 0;
+      transition: var(--transition);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .ig-overlay i {
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+    }
+
+    .ig-overlay span {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .ig-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .ig-item:hover .ig-overlay {
+      opacity: 1;
+    }
+
+    .ig-follow-bar {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .ig-handle-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--navy-primary);
+      font-size: 0.98rem;
+      border: 1px solid var(--brown-accent);
+      padding: 10px 24px;
+      border-radius: 30px;
+      background: var(--bg-surface);
+    }
+
+    .ig-handle-link:hover {
+      background: var(--navy-primary);
+      color: #fff;
+      border-color: var(--navy-primary);
+    }
+
+    /* ==========================================================
+       FLUTE LESSONS (VERBATIM SITE CONTENT + REFINED DESIGN)
+       ========================================================== */
+    .section-lessons {
+      padding: 100px 0;
+      background: var(--bg-surface);
+    }
+
+    .lessons-intro {
+      max-width: 820px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .lessons-intro h2 {
+      font-family: var(--font-serif);
+      font-size: 2.7rem;
+      color: var(--navy-primary);
+      margin-bottom: 12px;
+    }
+
+    .lessons-intro .hook-question {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--brown-accent);
+      margin-bottom: 24px;
+    }
+
+    .lessons-intro p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    /* Basics & Details Dual Cards */
+    .lesson-framework-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .framework-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--gray-border);
+      border-radius: 8px;
+      padding: 36px;
+      transition: var(--transition);
+    }
+
+    .framework-card:hover {
+      border-color: var(--brown-accent);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+    }
+
+    .framework-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      color: var(--navy-primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .framework-card h3 i {
+      color: var(--brown-accent);
+      font-size: 1.3rem;
+    }
+
+    .framework-card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .framework-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Teaching Pedigree / Where & Who I've Taught */
+    .teaching-background-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .teaching-box {
+      background: var(--bg-beige);
+      border: 1px solid var(--gray-border);
+      border-radius: 8px;
+      padding: 32px;
+    }
+
+    .teaching-box h4 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--brown-deep);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .teaching-box h4 i {
+      color: var(--brown-accent);
+      font-size: 1.1rem;
+    }
+
+    .teaching-box p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    /* Flute Education Callout */
+    .education-journey {
+      background: var(--bg-cream);
+      border-left: 4px solid var(--brown-accent);
+      padding: 24px 30px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 60px;
+    }
+
+    .education-journey h4 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--navy-primary);
+      margin-bottom: 10px;
+    }
+
+    .education-journey p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    /* Fine Print & Policies */
+    .fine-print-wrapper {
+      background: var(--bg-cream);
+      border: 1px solid var(--gray-border);
+      border-radius: 8px;
+      padding: 40px;
+      margin-bottom: 60px;
+    }
+
+    .fine-print-wrapper h3 {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      color: var(--navy-primary);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .fine-print-wrapper p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .fine-print-wrapper p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Goethe Quote Block */
+    .goethe-quote-box {
+      max-width: 840px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 30px 20px 0;
+    }
+
+    .goethe-text {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--navy-primary);
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+
+    .goethe-author {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--brown-accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================
+       CONTACT FORM
+       ========================================================== */
+    .section-contact {
+      padding: 90px 0;
+      background: linear-gradient(180deg, var(--bg-beige) 0%, var(--bg-cream) 100%);
+      border-top: 1px solid var(--gray-border);
+    }
+
+    .contact-split {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      color: var(--navy-primary);
+      margin-bottom: 14px;
+    }
+
+    .contact-info p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .contact-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .contact-meta-item i {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--gray-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brown-accent);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-meta-item span {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    /* Form Card */
+    .form-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--gray-border);
+      border-radius: 8px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy-primary);
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--gray-border);
+      border-radius: 4px;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brown-accent);
+      background: #fff;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* ==========================================================
+       FOOTER
+       ========================================================== */
+    footer {
+      background: var(--navy-primary);
+      color: #fff;
+      padding: 50px 0 30px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 30px;
+      margin-bottom: 24px;
+    }
+
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-socials a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #fff;
+      transition: var(--transition);
+    }
+
+    .footer-socials a:hover {
+      background: var(--brown-accent);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #A0AEC0;
+    }
+
+    /* ==========================================================
+       RESPONSIVE
+       ========================================================== */
+    @media (max-width: 900px) {
+      .hero-grid, .bio-split, .lesson-framework-grid, .teaching-background-grid, .contact-split {
+        grid-template-columns: 1fr;
+      }
+      .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .bio-visuals {
+        position: static;
+      }
+      .hero-title {
+        font-size: 2.8rem;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav-links, .nav-socials {
+        display: none;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .footer-top, .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       NAVIGATION
+       ======================================================== -->
+  <header>
+    <div class="container navbar">
+      <a href="#" class="logo">Douglas DeVries <span>Flute</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#real-life">Life & Media</a></li>
+        <li><a href="#lessons">Flute Lessons</a></li>
+        <li><a href="#policies">Studio Policies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Three Social Media Icons -->
+      <div class="nav-socials">
+        <a href="https://www.youtube.com/@dwdflute" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/dwdflute" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+
+      <button class="mobile-toggle" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       HERO (PHOTO AT THE TOP & CLEAN IDENTITY)
+       ======================================================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      
+      <div class="hero-text">
+        <span class="hero-badge">Classical Musician & Educator</span>
+        <h1 class="hero-title">Douglas DeVries</h1>
+        <div class="hero-role">Flute Performance and Education</div>
+        
+        <p class="hero-blurb">
+          From Los Angeles to New York, and Houston to Seattle, Douglas is committed to redefining what it is to be a classical musician in the modern age.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#lessons" class="btn btn-primary"><i class="fa-solid fa-music"></i> Flute Lessons</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+
+      <!-- Photo Right at the Top -->
+      <div class="hero-photo-wrapper">
+        <div class="hero-photo-frame">
+          <!-- INSERT PHOTO: Allison Asthana Portrait -->
+          <img src="https://images.squarespace-cdn.com/content/v1/5f060f8bf79872793e0eb063/46fd7a9c-5864-4fba-b066-b08c959dcfe8/1X4A2847.jpeg" alt="Douglas DeVries - Flutist" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ABOUT ME & VERBATIM BIO
+       ======================================================== -->
+  <section class="section-about" id="about">
+    <div class="container bio-split">
+      
+      <!-- Visuals / Photos Slot -->
+      <div class="bio-visuals">
+        <div class="photo-card">
+          <!-- INSERT PHOTO: Allison Asthana Performance Shot -->
+          <img src="https://images.squarespace-cdn.com/content/v1/5f060f8bf79872793e0eb063/26a51d81-a181-4292-9c65-cc0b7ad56893/1X4A2792.jpeg" alt="Douglas DeVries Performance" />
+          <div class="photo-caption">Photography by Allison Asthana</div>
+        </div>
+        <div class="photo-card">
+          <!-- INSERT PHOTO: Additional Chamber or Headshot -->
+          <img src="https://images.squarespace-cdn.com/content/v1/5f060f8bf79872793e0eb063/1778003396244-97F9GIWGK0PFKX6OJOJ3/1X4A2620.jpeg" alt="Douglas DeVries Flute" />
+        </div>
+      </div>
+
+      <!-- Verbatim Bio Content -->
+      <div class="bio-content">
+        <span class="section-label">Biography</span>
+        <h2>About Me</h2>
+        
+        <p>
+          Douglas DeVries is Acting Associate Principal Flute of the Houston Symphony and Adjunct Flute Professor at Houston Christian University. He is also a founding member of the Monarch Chamber Players, a Houston-based nonprofit chamber ensemble that has presented over 300 performances since its founding in 2020.
+        </p>
+
+        <p>
+          He has performed extensively with The Philadelphia Orchestra over multiple seasons, including appearances with Yannick Nézet-Séguin at Carnegie Hall, Bravo! Vail, and the Saratoga Performing Arts Center, as well as on tour in China with Marin Alsop. He held the position of Acting Principal Flute with the San Antonio Philharmonic for two seasons.
+        </p>
+
+        <p>
+          As a guest artist, he has appeared in principal, second, piccolo, and auxiliary roles with the Baltimore Symphony, Los Angeles Philharmonic, Louisiana Philharmonic, and Hawaii Symphony, as well as the orchestras of Houston Ballet and Houston Grand Opera. As a soloist, DeVries has performed Bach’s Brandenburg Concerti, Mozart’s Flute Concerto in D Major, and Ibert’s Flute Concerto.
+        </p>
+
+        <p>
+          He can be heard on recordings of Béla Fleck’s “Louisiana” Concerto and Daniel Knaggs's <em>Swallow’s Wings</em>, with performances broadcast nationally and internationally on NPR and BBC Radio 3.
+        </p>
+
+        <p>
+          A dedicated educator, DeVries teaches at collegiate and pre-professional levels. In addition to his work at Houston Christian University, he maintains a competitive private studio of advanced students in the Houston area and serves as a coach with the Houston Youth Symphony. A native of Los Angeles, DeVries studied at The Juilliard School and Rice University with Jeffrey Khaner and Leone Buyse.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       DOUG IN REAL LIFE (INSTAGRAM GRID)
+       ======================================================== -->
+  <section class="section-irl" id="real-life">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-label">Media & Community</span>
+        <h2>Doug in Real Life</h2>
+        <p>Behind the scenes, rehearsals, concerts, and life in Houston and on tour.</p>
+      </div>
+
+      <div class="instagram-grid">
+        <a href="https://www.instagram.com/dwdflute" target="_blank" class="ig-item">
+          <!-- INSERT PHOTO 1 -->
+          <img src="https://images.squarespace-cdn.com/content/v1/5f060f8bf79872793e0eb063/46fd7a9c-5864-4fba-b066-b08c959dcfe8/1X4A2847.jpeg" alt="Instagram post" />
+          <div class="ig-overlay">
+            <i class="fa-brands fa-instagram"></i>
+            <span>View on Instagram</span>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/dwdflute" target="_blank" class="ig-item">
+          <!-- INSERT PHOTO 2 -->
+          <img src="https://images.squarespace-cdn.com/content/v1/5f060f8bf79872793e0eb063/26a51d81-a181-4292-9c65-cc0b7ad56893/1X4A2792.jpeg" alt="Instagram post" />
+          <div class="ig-overlay">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Monarch Chamber Players</span>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/dwdflute" target="_blank" class="ig-item">
+          <!-- INSERT PHOTO 3 -->
+          <img src="https://images.squarespace-cdn.com/content/v1/5f060f8bf79872793e0eb063/1778003396244-97F9GIWGK0PFKX6OJOJ3/1X4A2620.jpeg" alt="Instagram post" />
+          <div class="ig-overlay">
+            <i class="fa-brands fa-instagram"></i>
+            <span>In Rehearsal</span>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/dwdflute" target="_blank" class="ig-item">
+          <!-- INSERT PHOTO 4 -->
+          <img src="https://res.cloudinary.com/soundbetter/image/upload/c_fill,f_auto,g_face:auto,h_533,q_auto:eco,w_763/v1684258288/assets/photos/560296/Doug_Crop.jpg" alt="Instagram post" />
+          <div class="ig-overlay">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Behind the Scenes</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="ig-follow-bar">
+        <a href="https://www.instagram.com/dwdflute" target="_blank" class="ig-handle-link">
+          <i class="fa-brands fa-instagram"></i> Connect with @dwdflute on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FLUTE LESSONS (EXACT ORIGINAL TEXT REFORMATTED CLEANLY)
+       ======================================================== -->
+  <section class="section-lessons" id="lessons">
+    <div class="container">
+      
+      <!-- Intro & Philosophy -->
+      <div class="lessons-intro">
+        <span class="section-label">Flute Studio</span>
+        <h2>Flute Lessons</h2>
+        <div class="hook-question">So you want to play flute. Now what?</div>
+        
+        <p>
+          Music has the power to be the most rewarding part of a students life. Therefore, it matters greatly with whom they study. Studying music has proven to equip both children and young adults, students of all ages, with the tools necessary for excelling in life: discipline, focus, perseverance, confidence, and self-esteem. As such, having a teacher that develops and coaches these skills while also nurturing the artistic and creative growth of the young musician is absolutely essential.
+        </p>
+
+        <p>
+          It is my belief and practice that all students need a place to explore, create, challenge, and discover, and for me, as a child that space was the practice room and my weekly flute lessons. Now as a teacher and professional musician I consider it my privilege to do the same for young flutists today.
+        </p>
+      </div>
+
+      <!-- The Basics & The Details Dual Cards -->
+      <div class="lesson-framework-grid">
+        
+        <!-- The Basics -->
+        <div class="framework-card">
+          <h3><i class="fa-solid fa-compass"></i> The Basics</h3>
+          <p>
+            I teach out of my home studio, located conveniently in Rice Village, steps from Rice University right in the heart of Houston, TX. Private lessons are designed to take place weekly and in person, though I am equipped to teach lessons online on a case-by-case basis should the need arise.
+          </p>
+          <p>
+            Flute lessons for beginner and early intermediate players are 30 minutes long, and for the developing intermediate flutist and the advanced student lessons will be one hour.
+          </p>
+        </div>
+
+        <!-- The Details -->
+        <div class="framework-card">
+          <h3><i class="fa-solid fa-list-check"></i> The Details</h3>
+          <p>
+            Your time in these lessons will focus on stimulating your musical, technical and emotional growth as a flutist. Together we will establish your focus for each semester and will appropriate necessary scales, etudes, tone development studies, and repertoire.
+          </p>
+          <p>
+            Lessons are meant to be enjoyable for both teacher and student. The primary goal is for great music to be created and enjoyed. As such, please be aware that whatever preparation you put forth will be the benefit you reap by the end of our time together.
+          </p>
+          <p>
+            Each week, I leave my students with a practice plan/assignments to complete, and progress will be gaged at each lesson. It will be impossible to gage and/or make progress as an instrumentalist without putting in the amount of practice time that is necessary to complete the daily and weekly assignments. As such, please consider the implied time commitment required when taking private flute lessons.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Who & Where I've Taught -->
+      <div class="teaching-background-grid">
+        
+        <div class="teaching-box">
+          <h4><i class="fa-solid fa-user-graduate"></i> Who I've Taught</h4>
+          <p>
+            Students of mine can be found studying music all over Texas and beyond, including flute majors at the University of Houston, the University of North Texas, Sam Houston State University, Texas A&M, as well as at the Eastman School of Music in Rochester, NY.
+          </p>
+        </div>
+
+        <div class="teaching-box">
+          <h4><i class="fa-solid fa-chalkboard-user"></i> Where I've Taught</h4>
+          <p>
+            Houston Community College, and as a coach for the Houston Youth Symphony. I have taught for Floot Fire Houston, for The Informed Flutist, Aralee Dorough's flute intensive at the University of Houston, and at the Fine Arts Summer Academy in Nashville, TN. I was also the non-major flute teacher while a graduate student at Rice University.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- My Flute Education -->
+      <div class="education-journey">
+        <h4>My Flute Education</h4>
+        <p>
+          I began playing the flute in 7th grade band in Los Angeles, CA. From there I continued playing in high school band, region band, and the California all state band, as well as youth orchestras all across Southern California until I graduated high school and moved to New York City to begin my Bachelors degree at The Juilliard School. After graduation I moved to Houston to get my Masters degree at Rice University's Shepherd School of Music.
+        </p>
+      </div>
+
+      <!-- The Fine Print -->
+      <div class="fine-print-wrapper" id="policies">
+        <h3>The Fine Print</h3>
+        <p>
+          Flute lessons will be scheduled at a mutually agreeable time. I do my best to give ample notice if I need to cancel or reschedule a lesson (ideally at least two weeks). In the case of an emergency, I will contact you directly as soon as possible and we will decide in each case if we will forgo the lesson or reschedule it. I require 24 hours notice if you need to cancel a lesson and we can decide in each case if it is most appropriate to forgo or reschedule the lesson.
+        </p>
+        <p>
+          In the case of a last minute cancellation, with less than 24 hours notice, rescheduling will be decided at my discretion. Be advised: not finishing homework, forgetting, or not being prepared are not acceptable last minute cancellation reasons--lack of sufficient preparation will be decided, again, at my discretion. In an emergency situation, I am prepared to be flexible.
+        </p>
+        <p>
+          Payment in full for the lessons of a given month is due at the first lesson of that month. I expect all students to commit to regular flute lessons for the duration of the school calendar year (September-May).
+        </p>
+        <p>
+          Teaching private lessons is something I take seriously and it is a commitment to consistent work on both sides and this ensures that both teacher and student are committed to the highest level.
+        </p>
+      </div>
+
+      <!-- Goethe Quote -->
+      <div class="goethe-quote-box">
+        <p class="goethe-text">
+          “A man should hear a little music, read a little poetry, and see a fine picture every day of his life, in order that worldly cares may not obliterate the sense of the beautiful which God has implanted in the human soul.”
+        </p>
+        <div class="goethe-author">— Goethe</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CONTACT FORM (EXACT TEXT)
+       ======================================================== -->
+  <section class="section-contact" id="contact">
+    <div class="container contact-split">
+      
+      <div class="contact-info">
+        <span class="section-label">Get in Touch</span>
+        <h2>Contact Me</h2>
+        <p>
+          Please contact me via this online form. I will respond to you as soon as possible! I look forward to meeting you and to hearing you/your student play.
+        </p>
+
+        <div class="contact-meta-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Rice Village studio, Houston, TX</span>
+        </div>
+
+        <div class="contact-meta-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>douglasdevriesflute@gmail.com</span>
+        </div>
+      </div>
+
+      <!-- Form Box -->
+      <div class="form-card">
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to Douglas.');">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name (required)</label>
+              <input type="text" id="fname" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name (required)</label>
+              <input type="text" id="lname" class="form-control" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" class="form-control" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message (required)</label>
+            <textarea id="message" class="form-control" placeholder="Share your flute experience, goals, or performance inquiry..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px;">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          Douglas DeVries
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://www.youtube.com/@dwdflute" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/dwdflute" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Douglas DeVries. Photography by Allison Asthana.</p>
+        <p><a href="#" style="text-decoration: underline;">Back to top &uarr;</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Nav Toggle Script -->
+  <script>
+    function toggleNav() {
+      const links = document.querySelector('.nav-links');
+      const socials = document.querySelector('.nav-socials');
+      if (links.style.display === 'flex') {
+        links.style.display = 'none';
+        socials.style.display = 'none';
+      } else {
+        links.style.display = 'flex';
+        links.style.flexDirection = 'column';
+        links.style.position = 'absolute';
+        links.style.top = '80px';
+        links.style.left = '0';
+        links.style.right = '0';
+        links.style.background = '#FAF8F5';
+        links.style.padding = '20px';
+        links.style.borderBottom = '1px solid #E5E0D8';
+        socials.style.display = 'flex';
+        socials.style.justifyContent = 'center';
+        socials.style.padding = '10px 0';
+      }
+    }
+  </script>
+</body>
+</html>
